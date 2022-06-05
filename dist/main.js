@@ -1,12 +1,6 @@
-import './style.css'
-
-import * as THREE from 'three';
-import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls'
-import { FontLoader } from 'three/examples/jsm/loaders/FontLoader'
-import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry'
-import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader'
 
 
+import * as THREE from 'https://unpkg.com/three@0.127.0/build/three.module.js'
 
 const scene = new THREE.Scene();
 
@@ -41,7 +35,7 @@ scene.add(pointLight)
 const gridHelper = new THREE.GridHelper(200,50);
 scene.add(gridHelper)
 
-const controls = new OrbitControls(camera, renderer.domElement);
+/*const controls = new OrbitControls(camera, renderer.domElement);
 
 const loader = new FontLoader();
 
@@ -64,7 +58,7 @@ loader3d.load ('sumodel.fbx', (object)=> {
 
   scene.add(object)
 })
-
+*/
 function animate() {
   requestAnimationFrame(animate)
 
@@ -73,7 +67,7 @@ function animate() {
   donutMesh.rotation.y += .001
   donutMesh.rotation.z += .001
 
-  controls.update()
+  //controls.update()
   renderer.render(scene,camera)
 }
 
