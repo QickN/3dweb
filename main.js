@@ -30,9 +30,8 @@ scene.add(donutMesh)
 const pointLight = new THREE.PointLight(0xffffff)
 pointLight.position.set(-20,-20,40)
 
-const light = new THREE.AmbientLight(0xffffff)
+
 scene.add(pointLight)
-scene.add(light)
 
 
 
@@ -62,13 +61,7 @@ loader3d.load ('sumodel.fbx', (object)=> {
   scene.add(object)
 })
 
-const loader3d2 = new FBXLoader();
 
-loader3d2.load('GCU Map v13.fbx', (object2)=>{
-  object2.scale.set(10,10,10)
-  object2.rotateX(-1.5)
-  scene.add(object2)
-})
 
 function animate() {
   requestAnimationFrame(animate)
