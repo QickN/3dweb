@@ -1,6 +1,6 @@
 
 import * as THREE from 'https://unpkg.com/three@0.127.0/build/three.module.js'
-import { OrbitControls } from '/OrbitControls.js'
+import { OrbitControls } from 'https://unpkg.com/three@0.127.0/examples/jsm/controls/OrbitControls.js'
 import { FontLoader } from '/node_modules/three/examples/jsm/loaders/FontLoader.js'
 import { TextGeometry } from '/node_modules/three/examples/jsm/geometries/TextGeometry.js'
 import { FBXLoader } from '/node_modules/three/examples/jsm/loaders/FBXLoader.js'
