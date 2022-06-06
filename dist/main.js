@@ -1,9 +1,9 @@
 
 import * as THREE from 'https://unpkg.com/three@0.127.0/build/three.module.js'
-import { OrbitControls } from 'https://unpkg.com/three@0.127.0/examples/jsm/controls/OrbitControls'
-//import { FontLoader } from 'https://unpkg.com/three@0.127.0/examples/jsm/loaders/FontLoader'
-//import { TextGeometry } from 'https://unpkg.com/three@0.127.0/examples/jsm/geometries/TextGeometry'
-//import { FBXLoader } from 'https://unpkg.com/three@0.127.0/examples/jsm/loaders/FBXLoader'
+import { OrbitControls } from '/node_modules/three/examples/jsm/controls/OrbitControls.js'
+import { FontLoader } from '/node_modules/three/examples/jsm/loaders/FontLoader.js'
+import { TextGeometry } from '/node_modules/three/examples/jsm/geometries/TextGeometry.js'
+import { FBXLoader } from '/node_modules/three/examples/jsm/loaders/FBXLoader.js'
 
 const scene = new THREE.Scene();
 
@@ -39,10 +39,10 @@ const gridHelper = new THREE.GridHelper(200,50);
 scene.add(gridHelper)
 
 const controls = new OrbitControls(camera, renderer.domElement);
-/*
+
 const loader = new FontLoader();
 
-loader.load('node_modules/three/examples/fonts/helvetiker_regular.typeface.json', function( font ){
+loader.load('System Font_Bold.json', function( font ){
   const name = new TextGeometry( "Nicholas Quam", {
     font: font,
     size: 3,
@@ -54,14 +54,13 @@ loader.load('node_modules/three/examples/fonts/helvetiker_regular.typeface.json'
   scene.add(nameMesh)
 });
 
-const loader3d= new FBXLoader();
+const loader3d = new FBXLoader();
 
 loader3d.load ('sumodel.fbx', (object)=> {
   object.scale.set(.1,.1,.1)
-
   scene.add(object)
 })
-*/
+
 function animate() {
   requestAnimationFrame(animate)
 
@@ -70,7 +69,7 @@ function animate() {
   donutMesh.rotation.y += .001
   donutMesh.rotation.z += .001
 
-  //controls.update()
+  controls.update()
   renderer.render(scene,camera)
 }
 
