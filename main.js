@@ -1,6 +1,9 @@
 
-
 import * as THREE from 'https://unpkg.com/three@0.127.0/build/three.module.js'
+import { OrbitControls } from 'https://unpkg.com/three@0.127.0/examples/jsm/controls/OrbitControls'
+//import { FontLoader } from 'https://unpkg.com/three@0.127.0/examples/jsm/loaders/FontLoader'
+//import { TextGeometry } from 'https://unpkg.com/three@0.127.0/examples/jsm/geometries/TextGeometry'
+//import { FBXLoader } from 'https://unpkg.com/three@0.127.0/examples/jsm/loaders/FBXLoader'
 
 const scene = new THREE.Scene();
 
@@ -35,8 +38,8 @@ scene.add(pointLight)
 const gridHelper = new THREE.GridHelper(200,50);
 scene.add(gridHelper)
 
-/*const controls = new OrbitControls(camera, renderer.domElement);
-
+const controls = new OrbitControls(camera, renderer.domElement);
+/*
 const loader = new FontLoader();
 
 loader.load('node_modules/three/examples/fonts/helvetiker_regular.typeface.json', function( font ){
