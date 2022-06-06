@@ -42,7 +42,7 @@ const controls = new OrbitControls(camera, renderer.domElement);
 
 const loader = new FontLoader();
 
-loader.load('node_modules/fonts/helvetiker_bold.typeface.json', function( font ){
+loader.load('Roboto Black_Italic.json', function( font ){
   const name = new TextGeometry( "Nicholas Quam", {
     font: font,
     size: 3,
